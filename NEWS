@@ -1,3 +1,19 @@
+Changes in version 1.0.4 (2014-05-23)
+-------------------------------------
+
+BUG FIXES
+
+    o getBinAnnotations() fixed after being broken by a change in Bitbucket
+
+Changes in version 1.0.3 (2014-05-23)
+-------------------------------------
+
+IMPROVEMENTS
+
+    o added exportBins() for exporting to a file
+
+    o switch graphics in the vignette to PNG
+
 Changes in version 1.0.2 (2014-05-15)
 -------------------------------------
 
