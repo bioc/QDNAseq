@@ -1,3 +1,12 @@
+Changes in version 1.8.1 (2016-10-08)
+-------------------------------------
+
+OTHER
+
+    o Package now imports matrixStats::colMedians() as a plain function
+      as it will be in matrixStats (>= 0.51.0).
+
+
 Changes in version 1.8.0 (2016-04-15)
 -------------------------------------
 
