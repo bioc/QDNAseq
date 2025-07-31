@@ -70,9 +70,9 @@ createBins <- function(bsgenome, binSize, ignoreMitochondria=TRUE,
     oopts <- options("QDNAseq::verbose"=verbose)
     on.exit(options(oopts))
 
-    chrs <- GenomeInfoDb::seqnames(bsgenome)
+    chrs <- Seqinfo::seqnames(bsgenome)
     try({
-        info <- GenomeInfoDb::genomeStyles(GenomeInfoDb::organism(bsgenome))
+        info <- GenomeInfoDb::genomeStyles(BiocGenerics::organism(bsgenome))
         style <- GenomeInfoDb::seqlevelsStyle(bsgenome)[1]
         chrs <- info[, style]
     }, silent=TRUE)
@@ -84,7 +84,7 @@ createBins <- function(bsgenome, binSize, ignoreMitochondria=TRUE,
         if (length(selectedMT) != 0L)
             chrs <- chrs[-selectedMT]
     }
-    lengths <- GenomeInfoDb::seqlengths(bsgenome)[chrs]
+    lengths <- Seqinfo::seqlengths(bsgenome)[chrs]
     vmsg("Creating bins of ", binSize, " kbp for genome ",
         substitute(bsgenome))
 
